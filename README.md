@@ -59,21 +59,6 @@ Deploy for free on [Streamlit Community Cloud](https://streamlit.io/cloud):
 push this repo to GitHub, connect it at share.streamlit.io, point it at
 `app.py`, and it will build from `requirements.txt` automatically.
 
-## Swapping in real data
-
-To re-run this pipeline on real campus shuttle or transit-agency data:
-
-1. Replace `data/public_transport_delays.csv` with your real data, keeping
-   (or renaming to match) these columns: `transport_type`,
-   `weather_condition`, `season`, `temperature_C`, `precipitation_mm`,
-   `wind_speed_kmh`, `traffic_congestion_index`, `peak_hour`, `weekday`,
-   `holiday`, `event_type`, `actual_arrival_delay_min`, `time`.
-2. If your column names differ, update `CATEGORICAL_COLS`, `NUMERIC_COLS`,
-   and `load_data()` in `analysis/run_analysis.py` to match.
-3. Re-run `python analysis/run_analysis.py` — this regenerates
-   `outputs/model.pkl` and everything the dashboard reads.
-4. Re-run `streamlit run app.py` — no changes needed to `app.py` itself as
-   long as the column names line up.
 
 ## Project structure
 
@@ -93,29 +78,6 @@ bus-delay-predictor/
     ├── model_summary.txt
     └── eda_plots.png
 ```
-
-## Draft email to professor
-
-> Subject: A quick stats project on transit delay prediction
->
-> Hi Professor [Name],
->
-> For a side project I built a full regression + hypothesis-testing pipeline
-> on transit delay data — testing whether weather, time of day, day of week,
-> and traffic congestion predict delay, then shipping the model as an
-> interactive dashboard. On the dataset I used, none of the hypothesis tests
-> came back significant (p > 0.05 across weather, peak hour, day of week,
-> and transport type), and the regression model had very low explanatory
-> power (R² ≈ 0.01) — I believe the dataset itself was synthetically
-> generated rather than real observed data, which the analysis surfaced
-> pretty clearly. I'm planning to re-run the same pipeline on [real
-> campus/local transit data] next to see if the result holds. Code and
-> dashboard: [your GitHub / Streamlit link].
->
-> [Your name]
-
-*(Edit this once you've swapped in real data and gotten an actual finding —
-this draft is written to honestly reflect the current null result.)*
 
 ## Stack
 
