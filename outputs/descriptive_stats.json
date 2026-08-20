@@ -1,0 +1,34 @@
+{
+  "n_rows": 2000,
+  "mean_delay": 13.32,
+  "median_delay": 13.0,
+  "std_delay": 9.29,
+  "pct_delayed": 75.0,
+  "mean_delay_by_transport": {
+    "Bus": 13.54,
+    "Metro": 13.21,
+    "Train": 13.55,
+    "Tram": 12.95
+  },
+  "mean_delay_by_weather": {
+    "Clear": 13.5,
+    "Cloudy": 13.07,
+    "Fog": 12.88,
+    "Rain": 13.62,
+    "Snow": 13.53,
+    "Storm": 13.29
+  },
+  "mean_delay_by_peak": {
+    "0": 13.3,
+    "1": 13.36
+  },
+  "mean_delay_by_weekday": {
+    "Fri": 14.31,
+    "Mon": 14.04,
+    "Sat": 13.73,
+    "Sun": 12.8,
+    "Thu": 12.31,
+    "Tue": 13.12,
+    "Wed": 12.89
+  }
+}

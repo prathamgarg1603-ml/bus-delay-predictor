@@ -1,0 +1,35 @@
+{
+  "anova_weather": {
+    "test": "One-way ANOVA: delay ~ weather_condition",
+    "f_stat": 0.326,
+    "p_value": 0.89771,
+    "significant_at_bonferroni_alpha": false
+  },
+  "ttest_peak_hour": {
+    "test": "Welch's t-test: delay (peak hour) vs delay (off-peak)",
+    "t_stat": 0.123,
+    "p_value": 0.90187,
+    "significant_at_bonferroni_alpha": false,
+    "mean_peak": 13.36,
+    "mean_offpeak": 13.3
+  },
+  "anova_weekday": {
+    "test": "One-way ANOVA: delay ~ day_of_week",
+    "f_stat": 1.763,
+    "p_value": 0.10304,
+    "significant_at_bonferroni_alpha": false
+  },
+  "anova_transport_type": {
+    "test": "One-way ANOVA: delay ~ transport_type",
+    "f_stat": 0.474,
+    "p_value": 0.7005,
+    "significant_at_bonferroni_alpha": false
+  },
+  "corr_traffic_congestion": {
+    "test": "Pearson correlation: traffic_congestion_index vs delay",
+    "r": -0.011,
+    "p_value": 0.62279,
+    "significant_at_bonferroni_alpha": false
+  },
+  "_note": "Using Bonferroni-corrected alpha = 0.05/5 = 0.01 since 5 tests were run"
+}

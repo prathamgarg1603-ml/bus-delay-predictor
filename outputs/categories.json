@@ -1,0 +1,97 @@
+{
+  "transport_type": [
+    "Bus",
+    "Metro",
+    "Train",
+    "Tram"
+  ],
+  "weather_condition": [
+    "Clear",
+    "Cloudy",
+    "Fog",
+    "Rain",
+    "Snow",
+    "Storm"
+  ],
+  "season": [
+    "Autumn",
+    "Spring",
+    "Summer",
+    "Winter"
+  ],
+  "weekday_name": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+  ],
+  "route_id": [
+    "Route_1",
+    "Route_10",
+    "Route_11",
+    "Route_12",
+    "Route_13",
+    "Route_14",
+    "Route_15",
+    "Route_16",
+    "Route_17",
+    "Route_18",
+    "Route_19",
+    "Route_2",
+    "Route_20",
+    "Route_3",
+    "Route_4",
+    "Route_5",
+    "Route_6",
+    "Route_7",
+    "Route_8",
+    "Route_9"
+  ],
+  "train_columns": [
+    "const",
+    "temperature_C",
+    "precipitation_mm",
+    "wind_speed_kmh",
+    "traffic_congestion_index",
+    "peak_hour",
+    "holiday",
+    "has_event",
+    "weather_condition_Cloudy",
+    "weather_condition_Fog",
+    "weather_condition_Rain",
+    "weather_condition_Snow",
+    "weather_condition_Storm",
+    "transport_type_Metro",
+    "transport_type_Train",
+    "transport_type_Tram",
+    "season_Spring",
+    "season_Summer",
+    "season_Winter",
+    "weekday_name_Mon",
+    "weekday_name_Sat",
+    "weekday_name_Sun",
+    "weekday_name_Thu",
+    "weekday_name_Tue",
+    "weekday_name_Wed"
+  ],
+  "categorical_cols": [
+    "weather_condition",
+    "transport_type",
+    "season",
+    "weekday_name"
+  ],
+  "numeric_cols": [
+    "temperature_C",
+    "precipitation_mm",
+    "wind_speed_kmh",
+    "traffic_congestion_index",
+    "peak_hour",
+    "holiday",
+    "has_event"
+  ],
+  "test_r2": -0.0172,
+  "test_mae": 7.72
+}

@@ -1,0 +1,57 @@
+Design matrix: dummy-encoded categoricals (drop_first=True) + numeric predictors
+Predictors: ['weather_condition', 'transport_type', 'season', 'weekday_name', 'temperature_C', 'precipitation_mm', 'wind_speed_kmh', 'traffic_congestion_index', 'peak_hour', 'holiday', 'has_event']
+Reference (baseline) category for each dummy-encoded variable is whichever
+category got dropped -- pandas drops the first one alphabetically by default.
+Test set R^2 (held-out 20% of data, NOT the same rows the model was fit on): -0.0172
+Test set MAE: 7.72 minutes
+
+The model results should be interpreted carefully.
+
+                               OLS Regression Results                               
+====================================================================================
+Dep. Variable:     actual_arrival_delay_min   R-squared:                       0.016
+Model:                                  OLS   Adj. R-squared:                  0.001
+Method:                       Least Squares   F-statistic:                     1.063
+Date:                      Thu, 20 Aug 2026   Prob (F-statistic):              0.380
+Time:                              10:06:52   Log-Likelihood:                -5827.5
+No. Observations:                      1600   AIC:                         1.171e+04
+Df Residuals:                          1575   BIC:                         1.184e+04
+Df Model:                                24                                         
+Covariance Type:                  nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+const                       16.8422      1.281     13.144      0.000      14.329      19.356
+temperature_C               -0.0402      0.020     -1.970      0.049      -0.080      -0.000
+precipitation_mm             0.0087      0.040      0.215      0.829      -0.070       0.088
+wind_speed_kmh              -0.0015      0.014     -0.114      0.910      -0.028       0.025
+traffic_congestion_index     0.0003      0.008      0.041      0.967      -0.015       0.016
+peak_hour                    0.1219      0.527      0.231      0.817      -0.911       1.155
+holiday                      1.0049      0.818      1.229      0.219      -0.599       2.609
+has_event                   -0.3818      0.475     -0.804      0.421      -1.313       0.549
+weather_condition_Cloudy    -0.5292      0.817     -0.648      0.517      -2.131       1.073
+weather_condition_Fog       -0.7738      0.799     -0.968      0.333      -2.342       0.794
+weather_condition_Rain      -0.3106      0.813     -0.382      0.702      -1.904       1.283
+weather_condition_Snow      -0.1940      0.808     -0.240      0.810      -1.779       1.390
+weather_condition_Storm     -0.4988      0.796     -0.627      0.531      -2.059       1.062
+transport_type_Metro        -0.0555      0.660     -0.084      0.933      -1.351       1.240
+transport_type_Train        -0.5317      0.657     -0.809      0.419      -1.821       0.758
+transport_type_Tram         -0.7731      0.655     -1.180      0.238      -2.059       0.512
+season_Spring               -0.6372      0.678     -0.940      0.347      -1.966       0.692
+season_Summer               -1.4779      0.662     -2.232      0.026      -2.776      -0.179
+season_Winter               -1.1211      0.676     -1.660      0.097      -2.446       0.204
+weekday_name_Mon            -0.6591      0.865     -0.761      0.446      -2.357       1.039
+weekday_name_Sat            -1.1516      0.877     -1.313      0.189      -2.872       0.569
+weekday_name_Sun            -1.8865      0.872     -2.163      0.031      -3.597      -0.175
+weekday_name_Thu            -2.4079      0.872     -2.760      0.006      -4.119      -0.697
+weekday_name_Tue            -1.3056      0.877     -1.488      0.137      -3.027       0.415
+weekday_name_Wed            -1.7306      0.875     -1.978      0.048      -3.447      -0.014
+==============================================================================
+Omnibus:                      691.307   Durbin-Watson:                   2.027
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               84.417
+Skew:                          -0.065   Prob(JB):                     4.67e-19
+Kurtosis:                       1.882   Cond. No.                         528.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
